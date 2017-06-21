@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="ebook">
-		<class>ebook.Account</class>
-		<class>ebook.Book</class>
-		<class>ebook.BookOrder</class>
-		<class>ebook.OrderDetail</class>
+		<class>jp.co.comnic.javalesson.ebook.entity.Account</class>
+		<class>jp.co.comnic.javalesson.ebook.entity.Book</class>
+		<class>jp.co.comnic.javalesson.ebook.entity.BookOrder</class>
+		<class>jp.co.comnic.javalesson.ebook.entity.OrderDetail</class>
 	</persistence-unit>
 </persistence>

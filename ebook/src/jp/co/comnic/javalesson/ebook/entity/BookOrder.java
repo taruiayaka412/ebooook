@@ -1,4 +1,4 @@
-package ebook;
+package jp.co.comnic.javalesson.ebook.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;
