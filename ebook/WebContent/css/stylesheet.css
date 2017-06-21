@@ -5,7 +5,7 @@ html, body
      width:100%;      /* ページ全体のpadding */
      text-align:center;   /* 下記のautoに未対応用のセンタリング */
     }
-
+    
 a {
     text-decoration: none;
     font-size: 14px;
@@ -19,8 +19,6 @@ a {
      width:650px;         /* 幅を決定する */
     }
     
-
-
 #footer {
 	position: fixed;
 	bottom: 0;

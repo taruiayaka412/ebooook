@@ -13,7 +13,6 @@
 		     <jsp:include page="page-header.jsp">
 		     <jsp:param  name="page" value="top"/>
 		     </jsp:include>
-			
 			<br><br>
 			<table border="1">
 				<tr>
