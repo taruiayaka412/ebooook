@@ -12,7 +12,6 @@
      <jsp:include page="page-header.jsp">
      <jsp:param  name="page" value="login"/>
      </jsp:include>
-
   	<h3>新規登録</h3>
      	<form method="POST" action= "insert">
    		  <table>
