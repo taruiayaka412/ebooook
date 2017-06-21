@@ -24,6 +24,10 @@
 			<th>ISBN</th>
 		</tr>
 		</table>
+		
+		<br><br>
+   		<a href="buy.jsp">購入画面へ</a>
+		
 		<jsp:include page="page-footer.jsp"></jsp:include>
      </body>
 </html>
