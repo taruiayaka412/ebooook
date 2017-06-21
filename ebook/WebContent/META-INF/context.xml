@@ -1,0 +1,9 @@
+<Context>
+	<Resource name="ds/ebook"
+	          type="javax.sql.DataSource"
+	          driverClassName="com.mysql.jdbc.Driver"
+	          url="jdbc:mysql://192.168.70.129/ebook"
+	          username="root"
+	          password="mariadb"
+	/>
+</Context>
