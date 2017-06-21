@@ -1,5 +1,5 @@
 package jp.co.comnic.javalesson.ebook.entity;
-//tarui
+
 import java.io.Serializable;
 import javax.persistence.*;
 import java.util.List;
@@ -22,13 +22,13 @@ public class Account implements Serializable {
 	@Column(name="user_name")
 	private String userName;
 
-	//bi-directional many-to-many association to Book
-	@ManyToMany(mappedBy="accounts")
-	private List<Book> books;
-
 	//bi-directional many-to-one association to BookOrder
 	@OneToMany(mappedBy="account")
 	private List<BookOrder> bookOrders;
+
+	//bi-directional many-to-many association to Book
+	@ManyToMany(mappedBy="accounts")
+	private List<Book> books;
 
 	public Account() {
 	}
@@ -57,14 +57,6 @@ public class Account implements Serializable {
 		this.userName = userName;
 	}
 
-	public List<Book> getBooks() {
-		return this.books;
-	}
-
-	public void setBooks(List<Book> books) {
-		this.books = books;
-	}
-
 	public List<BookOrder> getBookOrders() {
 		return this.bookOrders;
 	}
@@ -85,6 +77,14 @@ public class Account implements Serializable {
 		bookOrder.setAccount(null);
 
 		return bookOrder;
+	}
+
+	public List<Book> getBooks() {
+		return this.books;
+	}
+
+	public void setBooks(List<Book> books) {
+		this.books = books;
 	}
 
 }
