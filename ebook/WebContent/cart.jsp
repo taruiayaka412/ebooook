@@ -15,6 +15,15 @@
 
 		<h3>カート</h3>
 
+		<table border="1">
+		<tr>
+			<th>本のタイトル</th>
+			<th>著者</th>
+			<th>発行日</th>
+			<th>値段</th>
+			<th>ISBN</th>
+		</tr>
+		</table>
 		<jsp:include page="page-footer.jsp"></jsp:include>
      </body>
 </html>
