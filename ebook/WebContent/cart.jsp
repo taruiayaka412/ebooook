@@ -13,8 +13,8 @@
      </head>
      <body>
 
-<h3>カート</h3>
+		<h3>カート</h3>
 
-<jsp:include page="page-footer.jsp"></jsp:include>
+		<jsp:include page="page-footer.jsp"></jsp:include>
      </body>
 </html>
