@@ -1,14 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
-<html>	
+<html>
 
      <jsp:include page="page-header.jsp">
      <jsp:param  name="page" value="login"/>
      </jsp:include>
      
-	<h3>ログイン画面</h3>
-     	<form method="POST" action= "login">
+     
+     <head>
+          <meta charset=UTF-8>
+          <title>sign up</title>
+     </head>
+  	<h3>新規登録</h3>
+     	<form method="POST" action= "insert">
    		  <table>
   		   <tr>
   			  <td>
@@ -26,14 +31,17 @@
   		 		<input type ="password" name = "pass">
   		 	  </td>
   		 	</tr>
+  		 	<tr>
+  			  <td>
+  		     	<b>username:</b>
+ 		      </td>
+ 		      <td>
+  		   		<input name = "user">
+  		   	  </td>
+  		   </tr>
   		 </table>
-     		<input type= "submit" value = "ログイン">
+     		<input type= "submit" value = "登録">
      </form>
      
-     <br><br>
-     <a href="signup.jsp">新規登録</a>
-     
-     <jsp:include page="page-footer.jsp"></jsp:include>
-	
-	
+      <jsp:include page="page-footer.jsp"></jsp:include>
 </html>
