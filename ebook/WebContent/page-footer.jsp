@@ -5,5 +5,7 @@
 	<script src=""></script>
 	<nav>
 	</nav>
+	<div id="footer">
 	<p>Copyright © comnic-javalesson 2017</p>
+	</div>
 </footer>

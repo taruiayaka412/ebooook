@@ -2,16 +2,17 @@
 
 <!DOCTYPE html>
 <html>
-
+<head>
+		<meta charset=UTF-8>
+		 <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+		<title>sidn up</title>
+     </head>
+     
+     <body>
      <jsp:include page="page-header.jsp">
      <jsp:param  name="page" value="login"/>
      </jsp:include>
-     
-     
-     <head>
-          <meta charset=UTF-8>
-          <title>sign up</title>
-     </head>
+
   	<h3>新規登録</h3>
      	<form method="POST" action= "insert">
    		  <table>
@@ -41,7 +42,7 @@
   		   </tr>
   		 </table>
      		<input type= "submit" value = "登録">
-     </form>
-     
+     	</form>
       <jsp:include page="page-footer.jsp"></jsp:include>
+      </body>
 </html>

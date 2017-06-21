@@ -2,9 +2,17 @@
 
 <!DOCTYPE html>
 <html>
-	<jsp:include page="page-header.jsp">
-	<jsp:param  name="page" value="login"/>
-	</jsp:include>
+   <head>
+		<meta charset=UTF-8>
+		 <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+		<title>top</title>
+     </head>
+     
+    <body>
+		<div id="main">
+		     <jsp:include page="page-header.jsp">
+		     <jsp:param  name="page" value="top"/>
+		     </jsp:include>
 	
 	<h3>購入画面</h3>
 	<table>
@@ -17,5 +25,6 @@
 	</th>
 	</tr>
 	</table>
+	</div>
 	<jsp:include page="page-footer.jsp"></jsp:include>
 </html>

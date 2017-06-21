@@ -2,12 +2,19 @@
 
 <!DOCTYPE html>
 <html>	
+ 	<head>
+		<meta charset=UTF-8>
+		 <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+		<title>login</title>
+     </head>
 
+	<body>
+	<div id="main">
      <jsp:include page="page-header.jsp">
      <jsp:param  name="page" value="login"/>
      </jsp:include>
      
-	<h3>ログイン画面</h3>
+     <h3>ログイン</h3>
      	<form method="POST" action= "login">
    		  <table>
   		   <tr>
@@ -33,7 +40,9 @@
      <br><br>
      <a href="signup.jsp">新規登録</a>
      
+      </div>
      <jsp:include page="page-footer.jsp"></jsp:include>
-	
+ 
+	</body>
 	
 </html>
