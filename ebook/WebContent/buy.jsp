@@ -10,10 +10,10 @@
 	<table>
 	<tr>
 	<th>
-	<input type= "submit" value = "買います">
+	<a href="completion.jsp"><input type= "submit" value = "買います"></a>
 	</th>
 	<th>
-	<input type= "submit" value = "買いません">
+	<a href="cart.jsp"><input type= "submit" value = "買いません"></a>
 	</th>
 	</tr>
 	</table>
