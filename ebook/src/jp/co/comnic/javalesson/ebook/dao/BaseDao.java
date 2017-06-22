@@ -6,6 +6,7 @@ public class BaseDao {
 
 	protected DataSource ds;
 
+	
 	public BaseDao() throws DaoException {
 		try {
 			ds = DataSourceFactory.getDataSource();
