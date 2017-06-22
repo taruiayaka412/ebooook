@@ -8,6 +8,7 @@
           <title>search_result</title>
      </head>
      <body>
+     		<div id="main">
           <jsp:include page="page-header.jsp">
      <jsp:param  name="page" value="top"/>
      </jsp:include>
@@ -22,6 +23,7 @@
 			<th>ISBN</th>
 		</tr>
 		</table>
+		</div>
      </body>
      
      
