@@ -2,13 +2,14 @@
 
 <!DOCTYPE html>
 <html>
-<head>
+	<head>
 		<meta charset=UTF-8>
 		 <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 		<title>sidn up</title>
-     </head>
+	</head>
      
      <body>
+     <div id="main">
      <jsp:include page="page-header.jsp">
      <jsp:param  name="page" value="login"/>
      </jsp:include>
@@ -40,6 +41,7 @@
   		   	  </td>
   		   </tr>
   		 </table>
+  		 </div>
      		<input type= "submit" value = "登録">
      	</form>
       <jsp:include page="page-footer.jsp"></jsp:include>
