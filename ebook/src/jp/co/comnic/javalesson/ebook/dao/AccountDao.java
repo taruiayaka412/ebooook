@@ -1,86 +1,52 @@
 package jp.co.comnic.javalesson.ebook.dao;
 
-
-import java.sql.Connection;
-//import java.sql.PreparedStatement;
-//import java.sql.ResultSet;
-//import java.sql.Statement;
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.Persistence;
-import javax.persistence.TypedQuery;
-import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.NoResultException;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
-import jp.co.comnic.javalesson.ebook.entity.Account;
+import jp.co.comnic.javalesson.webapp.ems.entity.Account;
 
-public class AccountDao extends BaseDao{
-
+/**
+ * <p>部署テーブルのCRUD操作を実装するDAOクラス</p>
+ * 
+ * @author M.Yoneyama
+ * @version 2.0
+ */
+public class AccountDao extends BaseDao {
+	
 	public AccountDao() throws DaoException {}
+	private CriteriaQuery<Account> query = builder.createQuery(Account.class);
+	private Root<Account> root = query.from(Account.class);
 	
-public String login(String email, String pass) throws DaoException {
+	public List<Account> findAll() {
+		return super.findAll(query, root);
+	}
 	
-	String url = null;
+	public Account findById(Integer id) {
+		return super.findById(Account.class, id);
+	}
 	
-	System.out.println(email);
-	System.out.println(pass);
-	/*
-	String sql = "SELECT * FROM account WHERE email = ? AND password = ?";
+	public Account loginAuthenticate(String email, String password)  {
+
+		Account account = null;
 		
-		try (Connection conn = ds.getConnection();
-		     PreparedStatement pstmt = conn.prepareStatement(sql)) {
+		try {
+			// Criteria APIを使用して以下SQLを生成する
+			// SELECT * FROM ACCOUNT WHERE email = [email] AND password = [password]
+			query.select(root)
+				 .where(builder.equal(root.get("email"), email), 
+						builder.equal(root.get("password"), password));
 			
-			pstmt.setString(1, email);
-			pstmt.setString(2, pass);
+			// SQLを実行して結果を単一のエンティティ・オブジェクトとして取得
+			account = em.createQuery(query).getSingleResult();
 			
-		    try (ResultSet rs = pstmt.executeQuery()) {
-		    	
-//		    	System.out.println(rs);
-		    	
-//		try (Connection conn = ds.getConnection();
-//				 Statement stmt = conn.createStatement();
-//				 ResultSet rs = stmt.executeQuery(sql)) {
-		    	
-		    	if(rs.next() == true){
-		    		url = "/index.jsp";
-		    	} else {
-		    		url = "/error.jsp";
-		    	}
-				
-			} catch (Exception ex) {
-				throw new DaoException(ex);
-			}
-		} catch (Exception ex) {
-			throw new DaoException(ex);
+		} catch (NoResultException e) {
+			// getSingleResultメソッドは結果がなかった場合にNoResultExceptionをthrow
+			// するため、この例外処理は不要
 		}
 		
-		*/
-	
-	try (Connection conn = ds.getConnection()){
-		
-		EntityManager em = Persistence.createEntityManagerFactory("ebook").createEntityManager();
-		CriteriaBuilder builder = em.getCriteriaBuilder();
-		CriteriaQuery<Account> criteria = builder.createQuery(Account.class);
-		Root<Account> ACCOUNT = criteria.from(Account.class);
-			
-		criteria.select(ACCOUNT)
-	    .where(builder.equal(ACCOUNT.get("email"), email),
-	    builder.equal(ACCOUNT.get("password"), pass));
-		
-		TypedQuery<Account> query = em.createQuery(criteria);
-		List<Account> list = query.getResultList();
-		
-    	if(list.isEmpty()){
-    		url = "/error.jsp";
-    	} else {
-    		url = "/success.jsp";
-    	}
-		
-	}catch (Exception ex) {
-		throw new DaoException(ex);
-	}
-		return url;
+		return account;
 	}
 }
