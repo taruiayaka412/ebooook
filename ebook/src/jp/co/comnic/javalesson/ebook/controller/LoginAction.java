@@ -40,13 +40,20 @@ public class LoginAction implements Action {
 				// 認証済みを表すboolean値とログイン・ユーザー名をセット
 				request.getSession().setAttribute("isAuthenticated", "AUTHENTICATED");
 				request.getSession().setAttribute("loginUsername", account.getUserName());
+//				
+//				// トップページにリダイレクト
+//				forwardPath = null;
+//				response.sendRedirect("/" + request.getServletContext().getServletContextName() + "/");
 				
-				// トップページにリダイレクト
-				forwardPath = null;
-				response.sendRedirect("/" + request.getServletContext().getServletContextName() + "/");
+				request.getRequestDispatcher("success.jsp")
+				.forward(request, response);
 				
 			} else {
-				request.setAttribute("error", "[ERROR] Invalid e-mail or password.");
+//				request.setAttribute("error", "[ERROR] Invalid e-mail or password.");
+				
+				request.getRequestDispatcher("error.jsp")
+				.forward(request, response);
+				
 				forwardPath = "login";
 			}
 		} catch (DaoException e) {
