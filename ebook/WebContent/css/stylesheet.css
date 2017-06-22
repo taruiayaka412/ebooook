@@ -9,7 +9,34 @@ html, body
 a {
     text-decoration: none;
     font-size: 14px;
-} 
+}
+
+h1 { color: #1253A4;}
+h3 { color: #ff0080; }
+
+a:link { color: #2260DD; }
+a:visited { color: #2260DD; }
+a:hover { color: #FFD700; }
+a:active { color: #FFD700; } 
+
+table {
+	border-collapse: collapse;
+}
+
+td, th { padding: 0.2em 0.7em; }
+
+th {
+	border: 1px solid #D0D0D0;
+	font-size: 16px;
+	background: #F0F0F0;
+}
+
+td {
+	border: 1px solid #D0D0D0;
+	font-size: 16px;
+}
+
+form { padding-top: 1em; }
 
 #main
     {

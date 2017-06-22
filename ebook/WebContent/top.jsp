@@ -13,7 +13,8 @@
 		     <jsp:include page="page-header.jsp">
 		     <jsp:param  name="page" value="top"/>
 		     </jsp:include>
-			<br><br>
+		     
+		     <h3>ホーム</h3>
 			<table border="1">
 				<tr>
 					<th>本のタイトル</th>

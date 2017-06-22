@@ -27,4 +27,5 @@
 	</table>
 	</div>
 	<jsp:include page="page-footer.jsp"></jsp:include>
+	</body>
 </html>

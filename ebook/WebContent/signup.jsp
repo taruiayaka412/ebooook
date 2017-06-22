@@ -14,7 +14,6 @@
      <jsp:param  name="page" value="login"/>
      </jsp:include>
   	<h3>新規登録</h3>
-     	<form method="POST" action= "insert">
    		  <table>
   		   <tr>
   			  <td>
@@ -43,7 +42,6 @@
   		 </table>
   		 </div>
      		<input type= "submit" value = "登録">
-     	</form>
       <jsp:include page="page-footer.jsp"></jsp:include>
       </body>
 </html>
