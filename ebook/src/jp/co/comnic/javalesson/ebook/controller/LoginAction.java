@@ -6,9 +6,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import jp.co.comnic.javalesson.webapp.ems.dao.AccountDao;
-import jp.co.comnic.javalesson.webapp.ems.dao.DaoException;
-import jp.co.comnic.javalesson.webapp.ems.entity.Account;
+import jp.co.comnic.javalesson.ebook.dao.AccountDao;
+import jp.co.comnic.javalesson.ebook.dao.DaoException;
+import jp.co.comnic.javalesson.ebook.entity.Account;
 
 /**
  * <p>ログイン認証処理を実行するActionインターフェイスの実装。</p>

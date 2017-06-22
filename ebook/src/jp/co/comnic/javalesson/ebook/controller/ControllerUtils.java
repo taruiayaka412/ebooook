@@ -11,9 +11,9 @@ import org.apache.commons.beanutils.ConvertUtils;
 import org.apache.commons.beanutils.Converter;
 import org.apache.commons.beanutils.converters.DateConverter;
 
-import jp.co.comnic.javalesson.webapp.ems.dao.DaoException;
-import jp.co.comnic.javalesson.webapp.ems.dao.DepartmentDao;
-import jp.co.comnic.javalesson.webapp.ems.entity.Department;
+import jp.co.comnic.javalesson.ebook.dao.DaoException;
+import jp.co.comnic.javalesson.ebook.dao.DepartmentDao;
+import jp.co.comnic.javalesson.ebook.entity.Department;
 
 /**
  * <p>コントローラーの処理に関連する便利なメソッドをまとめたユーティリティ・クラス。</p>

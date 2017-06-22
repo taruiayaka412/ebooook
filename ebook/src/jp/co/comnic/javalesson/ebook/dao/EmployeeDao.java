@@ -13,8 +13,8 @@ import javax.persistence.criteria.Root;
 
 import org.apache.commons.beanutils.BeanUtils;
 
-import jp.co.comnic.javalesson.webapp.ems.entity.Department;
-import jp.co.comnic.javalesson.webapp.ems.entity.Employee;
+import jp.co.comnic.javalesson.ebook.entity.Department;
+import jp.co.comnic.javalesson.ebook.entity.Employee;
 
 /**
  * <p>従業員テーブルのCRUD操作を実装するDAOクラス</p>

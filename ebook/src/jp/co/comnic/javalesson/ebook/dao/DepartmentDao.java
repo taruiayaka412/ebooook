@@ -5,7 +5,7 @@ import java.util.List;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
-import jp.co.comnic.javalesson.webapp.ems.entity.Department;
+import jp.co.comnic.javalesson.ebook.entity.Department;
 
 /**
  * <p>部署テーブルのCRUD操作を実装するDAOクラス</p>

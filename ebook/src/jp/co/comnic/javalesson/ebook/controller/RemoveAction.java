@@ -6,8 +6,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import jp.co.comnic.javalesson.webapp.ems.dao.BaseDao;
-import jp.co.comnic.javalesson.webapp.ems.dao.DaoException;
+import jp.co.comnic.javalesson.ebook.dao.BaseDao;
+import jp.co.comnic.javalesson.ebook.dao.DaoException;
 
 /**
  * <p>レコードの削除処理を実行するActionインターフェイスの実装。</p>
